@@ -15,7 +15,7 @@ class _StatusScreenState extends State<StatusScreen> {
       backgroundColor: Colors.deepPurple,
       body: Center(
         child: Text(
-          "This is Status Screen..!",style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold, color: Colors.white),
+          "2. This is Status Screen..!",style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ),
       floatingActionButton: FloatingActionButton(
