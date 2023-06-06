@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.teal),
       darkTheme: ThemeData(primarySwatch: Colors.grey),
       home: SafeArea(
@@ -31,10 +32,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
 
-
-  MySnackbar(msg, context){
-    return ScaffoldMessenger.of(context).showSnackBar(MySnackbar(Text(msg), context));
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   decoration: BoxDecoration(color: Colors.teal),
                   accountName: Text('Flutter'),
                   accountEmail: Text('admin@flutter.dart'),
-                  currentAccountPicture: Image.network('https://mdevelopers.com/storage/0_flutterheader_0c3ac92d.png',),
+                  currentAccountPicture: Image.network('https://cdn-icons-png.flaticon.com/512/3135/3135715.png',),
 
                 ),
               ),

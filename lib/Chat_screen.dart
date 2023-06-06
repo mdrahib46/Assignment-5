@@ -8,6 +8,10 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
+  MySnackbar(msg, context){
+    return ScaffoldMessenger.of(context).showSnackBar(MySnackbar(Text(msg), context));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +25,9 @@ class _ChatScreenState extends State<ChatScreen> {
       ),
 
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          MySnackbar(Text('Chat button pressed'), context);
+        },
         backgroundColor: Colors.teal,
         child: Icon(Icons.chat),
       ),
