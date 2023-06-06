@@ -9,6 +9,11 @@ class CallScreen extends StatefulWidget {
 }
 
 class _CallScreenState extends State<CallScreen> {
+
+  MySnackbar(msg, context){
+    return ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +22,9 @@ class _CallScreenState extends State<CallScreen> {
       body: Center(child: Text('3. This is call\'s screen',style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold, color: Colors.white),),),
 
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: (){
+          MySnackbar('Call button Pressed', context);
+        },
         backgroundColor: Colors.indigoAccent,
         child: Icon(Icons.phone),
       ),

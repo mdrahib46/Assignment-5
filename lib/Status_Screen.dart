@@ -9,6 +9,10 @@ class StatusScreen extends StatefulWidget {
 }
 
 class _StatusScreenState extends State<StatusScreen> {
+  MySnackbar(msg, context){
+    return ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +23,9 @@ class _StatusScreenState extends State<StatusScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: (){
+          MySnackbar('Status Button Pressed', context);
+        },
         backgroundColor: Colors.deepPurpleAccent,
         child: Icon(Icons.text_snippet_outlined),
       ),
